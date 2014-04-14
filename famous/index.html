@@ -1,0 +1,254 @@
+<!--
+slidedeck: A modification of the Google IO 2012 HTML5 slide template
+URL: https://github.com/rmcgibbo/slidedeck
+
+Based on https://github.com/francescolaffi/elastic-google-io-slides, and
+ultimately:
+
+Google IO 2012 HTML5 Slide Template
+Authors: Eric Bidelman <ebidel@gmail.com>
+         Luke Mahe <lukem@google.com>
+URL: https://code.google.com/p/io-2012-slides
+-->
+<!DOCTYPE html>
+<html>
+<head>
+  <title> Famo.us is now open source</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">-->
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+  <!--This one seems to work all the time, but really small on ipad-->
+  <!--<meta name="viewport" content="initial-scale=0.4">-->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+   <link rel="shortcut icon" href=" http://uievolution.co.jp/favicon.ico"/> 
+  <link rel="stylesheet" media="all" href="theme/css/default.css">
+  <link rel="stylesheet" media="all" href="theme/css/custom.css">
+  <link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="theme/css/phone.css">
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->
+  <script data-main="js/slides" src="js/require-1.0.8.min.js"></script>
+
+  <!-- MathJax support  -->
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    showProcessingMessages: false,
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+      processEscapes: true
+    },
+    "HTML-CSS": { availableFonts: ["TeX"] }
+  });
+  </script>
+  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+</head>
+
+<body style="opacity: 0">
+
+<slides class="layout-widescreen">
+<slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+
+    <h1> Famo.us is now open source</h1>
+    <h2> UIE LT 2014/04/14</h2>
+    <p> Kazumasa Kohtaka</p>
+  </hgroup>
+</slide>
+
+
+<slide  >
+  
+    <hgroup>
+      <h2>Famo.us って?</h2>
+      <h3></h3>
+    </hgroup>
+    <article ><ul>
+<li>Web app (HTML5 app) を Native app のパフォーマンスで実行させるためのエンジン</li>
+<li>これまで Private Beta で利用されていたが, 誰でも見られるようになった<ul>
+<li><a href="https://www.youtube.com/watch?v=YmQMVjCVZBo">Famo.us Launch Event</a></li>
+</ul>
+</li>
+</ul></article>
+ 
+</slide>
+
+<slide  >
+  
+    <hgroup>
+      <h2>Demo - Rise</h2>
+      <h3></h3>
+    </hgroup>
+    <article ><ul>
+<li><a href="http://demo.famo.us/rise/">http://demo.famo.us/rise/</a></li>
+</ul>
+<p><img src="http://api.qrserver.com/v1/create-qr-code/?color=000000&amp;bgcolor=FFFFFF&amp;data=http%3A%2F%2Fdemo.famo.us%2Frise%2F&amp;qzone=1&amp;margin=0&amp;size=200x200&amp;ecc=L" /></p></article>
+ 
+</slide>
+
+<slide  >
+  
+    <hgroup>
+      <h2>Demo - Twitter</h2>
+      <h3></h3>
+    </hgroup>
+    <article ><ul>
+<li><a href="http://demo.famo.us/tweetus/">http://demo.famo.us/tweetus/</a></li>
+</ul>
+<p><img src="http://api.qrserver.com/v1/create-qr-code/?color=000000&amp;bgcolor=FFFFFF&amp;data=http%3A%2F%2Fdemo.famo.us%2Ftweetus%2F&amp;qzone=1&amp;margin=0&amp;size=200x200&amp;ecc=L" /></p></article>
+ 
+</slide>
+
+<slide  >
+  
+    <hgroup>
+      <h2>Demo - Game</h2>
+      <h3></h3>
+    </hgroup>
+    <article ><ul>
+<li><a href="http://famous-bird.herokuapp.com/">http://famous-bird.herokuapp.com/</a></li>
+</ul>
+<p><img src="http://api.qrserver.com/v1/create-qr-code/?color=000000&amp;bgcolor=FFFFFF&amp;data=http%3A%2F%2Ffamous-bird.herokuapp.com%2F&amp;qzone=1&amp;margin=0&amp;size=200x200&amp;ecc=L" /></p></article>
+ 
+</slide>
+
+<slide  >
+  
+    <hgroup>
+      <h2>Demo - Others</h2>
+      <h3></h3>
+    </hgroup>
+    <article ><ul>
+<li><a href="http://www.codepen.io/befamous/">http://www.codepen.io/befamous/</a></li>
+</ul>
+<p><img src="http://api.qrserver.com/v1/create-qr-code/?color=000000&amp;bgcolor=FFFFFF&amp;data=http%3A%2F%2Fwww.codepen.io%2Fbefamous%2F&amp;qzone=1&amp;margin=0&amp;size=200x200&amp;ecc=L" /></p></article>
+ 
+</slide>
+
+<slide  >
+  
+    <hgroup>
+      <h2>どうやって使うの?</h2>
+      <h3></h3>
+    </hgroup>
+    <article ><ul>
+<li>
+<p><a href="https://github.com/Famous/famous">Famo.us</a> on Github</p>
+</li>
+<li>
+<p><a href="http://nodejs.org/">Node.js</a> &amp; <a href="http://yeoman.io/">Yeoman</a> (Scaffolding) &amp; <a href="http://gruntjs.com/">Grunt</a> (Build)</p>
+</li>
+</ul>
+<pre class="prettyprint" data-lang="bash">
+$ npm install -g generator-famous
+$ mkdir newProject
+$ cd newProject
+$ yo famous
+$ grunt serve
+</pre></article>
+ 
+</slide>
+
+<slide  >
+  
+    <hgroup>
+      <h2>どうやって実現しているの?</h2>
+      <h3></h3>
+    </hgroup>
+    <article ><ul>
+<li>
+<p>DOM を使わずに独自のレンダリングエンジンを持つことで実現</p>
+<ul>
+<li>最終的にブラウザで表示される際にはもちろん DOM になるが, JavaScript から DOM へアクセスしないという意味</li>
+</ul>
+</li>
+<li>
+<p>いくつかの CSS プロパティに対して使われる H/W アクセラレーションを利用している</p>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function">matrix3d()</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/window.requestAnimationFrame">window.requestAnimationFrame()</a></li>
+<li>60FPS を実現している</li>
+</ul>
+</li>
+</ul></article>
+ 
+</slide>
+
+<slide  >
+  
+    <hgroup>
+      <h2>Dev Tools で見てみる</h2>
+      <h3></h3>
+    </hgroup>
+    <article ><ul>
+<li>
+<p><a href="http://blog.percolatestudio.com/engineering/the-future-of-javascript-animation-with-famous/">The Future of Javascript Animation with Famo.us</a></p>
+</li>
+<li>
+<p><a href="https://developers.google.com/events/io/sessions/325091862">Web Page Design with the GPU in Mind</a></p>
+</li>
+</ul></article>
+ 
+</slide>
+
+<slide  >
+  
+    <hgroup>
+      <h2>他のライブラリと併用できる?</h2>
+      <h3></h3>
+    </hgroup>
+    <article ><ul>
+<li>どうやっているのか分からないが, Launch Event では <a href="http://angularjs.org/">Angularjs</a> と併用できると言っていた</li>
+</ul></article>
+ 
+</slide>
+
+<slide  >
+  
+    <hgroup>
+      <h2>まとめ</h2>
+      <h3></h3>
+    </hgroup>
+    <article ><ul>
+<li>Famo.us は CSS 経由で H/W を利用して描画を行っている</li>
+<li>Famo.us は高性能だが, 利用するには Famo.us の流儀に従わなければならない (DOM を捨てなければならない)</li>
+<li>他のライブラリとの併用の仕方は今のところ不明</li>
+</ul></article>
+ 
+</slide>
+
+
+<slide class="thank-you-slide segue nobackground">
+  <!-- <aside class="gdbar right"><img src="images/google_developers_icon_128.png"></aside> -->
+  <article class="flexbox vleft auto-fadein">
+    <h2></h2>
+    <p></p>
+  </article>
+  <p data-config-contact class="auto-fadein"> <span>e-mail</span> <a href="mailto:kkohtaka@uievolution.com">kkohtaka@uievolution.com</a></p>
+  </p>
+</slide>
+
+<slide class="backdrop"></slide>
+
+</slides>
+
+<script>
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-XXXXXXXX-1']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+
+<!--[if IE]>
+  <script src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js"></script>
+  <script>CFInstall.check({mode: 'overlay'});</script>
+<![endif]-->
+</body>
+</html>
